@@ -1,0 +1,15 @@
+---
+kind: wasmer.io/App.v0
+name: wasmer-python-flask-server-worker
+package: wasmer/python-flask-server@0.1.0
+cli_args:
+  - -m
+  - flask
+  - --app
+  - /src/main
+  - run
+  - --debug
+  - --no-reload
+env:
+  PYTHONEXECUTABLE: /bin/python
+app_id: da_AKo6IotJU4y2

@@ -1,0 +1,28 @@
+[package]
+name = "wasmer/python-flask-worker"
+version = "0.1.0"
+description = "wasmer/python-flask-worker py worker"
+
+[dependencies]
+"wasmer/python" = "^3.12.6"
+
+[fs]
+"/src" = "./src"
+"/cpython/lib/python3.12" = "./.env/lib/python3.11"
+
+[[command]]
+name = "script"
+module = "wasmer/python:python"
+runner = "wasi"
+
+[command.annotations.wasi]
+main-args = [
+    "-m",
+    "flask",
+    "--app",
+    "/src/main",
+    "run",
+    "--debug",
+    "--no-reload",
+]
+env = ["PYTHONEXECUTABLE: /bin/python"]
