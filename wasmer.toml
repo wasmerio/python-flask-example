@@ -1,7 +1,8 @@
 [package]
 name = "wasmer/python-flask-worker"
-version = "0.1.0"
+version = "0.1.1"
 description = "wasmer/python-flask-worker py worker"
+readme = "README.md"
 
 [dependencies]
 "wasmer/python" = "^3.12.6"
