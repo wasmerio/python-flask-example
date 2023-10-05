@@ -1,6 +1,6 @@
 [package]
 name = "wasmer/python-flask-server"
-version = "0.1.3"
+version = "0.1.4"
 description = "wasmer/python-flask-server py worker"
 repository = "https://github.com/wasmerio/python-flask-example"
 readme = "README.md"
@@ -24,7 +24,6 @@ main-args = [
     "--app",
     "/src/main",
     "run",
-    "--host=0.0.0.0",
     "--port=8080",
     "--debug",
     "--no-reload",
