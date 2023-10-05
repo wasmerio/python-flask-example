@@ -14,6 +14,8 @@ git clone https://github.com/wasmerio/python-flask-example.git
 
 ```shell
 python3 -m venv .env
+source .env/bin/activate
+pip3 install Flask
 ```
 
 ### Run it locally using the command below

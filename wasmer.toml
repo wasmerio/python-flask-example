@@ -1,11 +1,12 @@
 [package]
-name = "wasmer/python-flask-worker"
-version = "0.1.1"
-description = "wasmer/python-flask-worker py worker"
+name = "wasmer/python-flask-server"
+version = "0.1.2"
+description = "wasmer/python-flask-server py worker"
+repository = "https://github.com/wasmerio/python-flask-example"
 readme = "README.md"
 
 [dependencies]
-"wasmer/python" = "^3.12.6"
+"python/python" = "^0.2.0"
 
 [fs]
 "/src" = "./src"
@@ -13,7 +14,7 @@ readme = "README.md"
 
 [[command]]
 name = "script"
-module = "wasmer/python:python"
+module = "python/python:python"
 runner = "wasi"
 
 [command.annotations.wasi]
@@ -23,6 +24,8 @@ main-args = [
     "--app",
     "/src/main",
     "run",
+    "--host=0.0.0.0",
+    "--port=8080",
     "--debug",
     "--no-reload",
 ]
